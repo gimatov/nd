@@ -1,0 +1,51 @@
+html, body, #wrapper, footer {width: 100%}
+html {height: 100%}
+body {min-height: 100%}
+#wrapper {
+    min-height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+#wrapper .middle {
+    padding-bottom: 50px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.card {
+    float: left;
+    margin: 2em;
+}
+
+#messages li::marker {
+    content: '>';
+}
+
+#gallery:after,
+.photos:after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.photos .photo {
+    float: left;
+    border: #ddd 1px solid;
+    margin: 1em;
+    position: relative;
+}
+.photos .photo img {
+    width: 150px;
+    height: 150px;
+}
+
+.photos .photo button {
+    position: absolute;
+    top: -0.5em;
+    right: -0.9em;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Добавление галереи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Название галереи" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавление сообщения</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Текст сообщения" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавление комментария</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Текст комментария" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">ND</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Вход</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reg.html">Регистрация</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="user_list.html">Список пользователей</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="middle">
+            <div style="width: 800px; margin: 2em auto 0; position: relative">
+                <div class="profile_photo" style="position: absolute; top: 0; right: 0; width: 150px; height: 150px">
+                    <img src="img/asuna.png" style="border-radius: 50%; width: 150px; height: 150px">
+                    <div style="position: absolute; border-radius: 50%; height: 20px; width: 20px; left: 12px; bottom: 12px;" class="bg-success"></div>
+                </div>
+                <h1>Асуна Юки</h1>
+                <em>Суб-лидер "Рыцарей крови"</em>
+
+                <h3 class="mt-5">Галереи <button class="btn btn-success btn-sm mb-1 fas fa-plus"
+                                                 data-bs-toggle="modal"
+                                                 data-bs-target="#galleryModal"></button></h3>
+                <div id="gallery">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/asuna.png" class="card-img-top" alt="Asuna">
+                        <div class="card-body">
+                            <h5 class="card-title">Пафосные походки</h5>
+                            <p class="card-text">2012</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="gallery.html" class="btn btn-primary">Смотреть</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-img-top bg-secondary" style="height: 250px; width: 100%"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Алисизация</h5>
+                            <p class="card-text">2020</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="gallery.html" class="btn btn-primary">Смотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="mt-5">Сообщения <button class="btn btn-success btn-sm mb-1 fas fa-plus"
+                                                  data-bs-toggle="modal"
+                                                  data-bs-target="#messageModal"></button></h3>
+                <div id="messages">
+                    <div class="row border-bottom">
+                        <div class="col">
+                            как объяснить маме, что альфа самцы не моют посуду
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                        <div class="col-12">
+                            <ul>
+                                <li>Жиз
+                                    <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                                    <button class="btn btn-sm btn-danger  fas fa-times"></button></li>
+                                <li>кеек
+                                    <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                                    <button class="btn btn-sm btn-danger  fas fa-times"></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            сколько гулять с собакой, чтоб не зассала хату
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            что делать, если щеки трясутся вместе с маршруткой
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            как научить своего кота жанглировать, чтобы он работал в цирке и содержал меня
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            где у курицы наггетсы
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            как залечь на дно, если ты уже на дне
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-bottom">
+                            где взять квашонку из тиктока
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn btn-sm btn-primary fas fa-comment-dots"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#commentModal"></button>
+                            <button class="btn btn-sm btn-warning fas fa-pen"></button>
+                            <button class="btn btn-sm btn-danger  fas fa-times"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-light">
+            2021 &copy; Надрышина Дарья
+        </footer>
+    </div>
+</body>
+</html>
